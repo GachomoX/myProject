@@ -53,4 +53,13 @@ function showData(data) {
         if (data.error) {
             result.innerHTML = data.error;
           }
+          else {
+            const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, "<br>");
+        
+            result.innerHTML = `
+                      <h2><strong>${artist}</strong> - ${songTitle}</h2>
+                      <span>${lyrics}</span>
+                  `;
+          }
+        
       
