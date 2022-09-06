@@ -23,3 +23,16 @@ function showData(data) {
           .join("")}
       </ul>
      `;
+     if (data.prev || data.next) {
+        more.innerHTML = `
+          ${
+            data.prev
+              ? `<button class="btn" onclick="getMoreSongs('${data.prev}')">Prev</button>`
+              : ""
+          }
+          ${
+            data.next
+              ? `<button class="btn" onclick="getMoreSongs('${data.next}')">Next</button>`
+              : ""
+          }
+        `;
