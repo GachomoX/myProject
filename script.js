@@ -10,3 +10,8 @@ async function searchSongs(term) {
 
   showData(data);
 }
+function showData(data) {
+    result.innerHTML = `
+    <ul class="songs">
+      ${data.data
+        
