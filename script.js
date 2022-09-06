@@ -46,3 +46,8 @@ function showData(data) {
       
         showData(data);
       }
+
+      async function getLyrics(artist, songTitle) {
+        const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
+        const data = await res.json();
+      
